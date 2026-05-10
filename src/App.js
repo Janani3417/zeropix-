@@ -1,213 +1,430 @@
+// src/App.jsx
+
+import { useState } from "react";
 import "./App.css";
 import logo from "./logo.png";
 
 function App() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-      {/* SIDEBAR */}
 
-      <aside className="sidebar">
+      {/* ================= NAVBAR ================= */}
 
-        <div className="sidebar-top">
+      <header className="navbar">
 
-          <img src={logo} alt="logo" />
+        <div className="logo-box">
 
-         
+          <img src={logo} alt="Zero Pix Logo" />
+
+          <div className="logo-text">
+
+            
+
+          </div>
 
         </div>
 
-        <nav className="sidebar-links">
+        {/* DESKTOP NAV */}
 
-          <a href="#">Dashboard</a>
+        <nav className="desktop-nav">
 
-          <a href="#">About</a>
+          <a href="#home">Home</a>
 
-          <a href="#">Services</a>
+          <a href="#about">About</a>
 
-          <a href="#">Packages</a>
+          <a href="#services">Services</a>
 
-          <a href="#">Why Us</a>
+          <a href="#packages">Packages</a>
 
-          <a href="#">Upload Project</a>
+          <a href="#why">Why Us</a>
 
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
 
         </nav>
 
-      </aside>
+        {/* MOBILE MENU BUTTON */}
 
-      {/* MAIN CONTENT */}
+        <div
+          className={`menu-btn ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
 
-      <main className="main-content">
+          <span></span>
+          <span></span>
+          <span></span>
 
-        {/* TOPBAR */}
+        </div>
 
-        <header className="topbar">
+      </header>
 
-          <div className="topbar-left">
+      {/* MOBILE NAV */}
 
-            <h1>Zero Pix Creative Studio</h1>
+      <div className={menuOpen ? "mobile-nav active" : "mobile-nav"}>
 
-          </div>
+        <a href="#home" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
 
-        </header>
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About
+        </a>
 
-        {/* HERO */}
+        <a href="#services" onClick={() => setMenuOpen(false)}>
+          Services
+        </a>
 
-        <section className="hero">
+        <a href="#packages" onClick={() => setMenuOpen(false)}>
+          Packages
+        </a>
 
-          <div className="hero-content">
+        <a href="#why" onClick={() => setMenuOpen(false)}>
+          Why Us
+        </a>
 
-            <p className="hero-small">
-              PROFESSIONAL REAL ESTATE EDITING
-            </p>
+        <a href="#contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </a>
 
-            <h1>
-              Premium Property
-              <br />
-              Editing Services
-            </h1>
+      </div>
 
-            <p className="hero-desc">
-              Photo Editing, Video Editing,
-              Graphic Design & Motion Graphics
-              Services with High Quality Output.
-            </p>
+      {/* ================= HERO SECTION ================= */}
 
-            <div className="hero-buttons">
+      <section className="hero" id="home">
 
-              <button className="primary-btn">
-                GET STARTED
-              </button>
+        <div className="hero-card">
 
-              <button className="secondary-btn">
-                VIEW SERVICES
-              </button>
+          <p className="hero-small-title">
+            PROFESSIONAL REAL ESTATE EDITING
+          </p>
 
-            </div>
+          <h1>
+            Premium Property
+            <br />
+            Editing Services
+          </h1>
 
-          </div>
+          <p className="hero-desc">
+            Photo Editing, Video Editing,
+            Graphic Design & Motion Graphics
+          </p>
 
-        </section>
+          <div className="hero-buttons">
 
-        {/* ABOUT */}
+            <button className="primary-btn">
+              Get Started
+            </button>
 
-        <section className="section">
-
-          <div className="section-header">
-
-            <p>ABOUT</p>
-
-            <h2>About Zero Pix Creative</h2>
-
-          </div>
-
-          <div className="about-box">
-
-            <p>
-              Zero Pix Creative is a creative studio specializing
-              in real estate editing, photography, videography,
-              graphic design, and motion graphics.
-            </p>
-
-            <p>
-              We create clean and premium visuals for modern brands
-              and real estate businesses.
-            </p>
+            <button className="secondary-btn">
+              View Services
+            </button>
 
           </div>
 
-        </section>
+        </div>
 
-        {/* SERVICES */}
+      </section>
 
-        <section className="section">
+      {/* ================= ABOUT ================= */}
 
-          <div className="section-header">
+      <section className="section" id="about">
 
-            <p>SERVICES</p>
+        <div className="container">
 
-            <h2>What We Do</h2>
+          <p className="section-small-title">
+            ABOUT
+          </p>
 
-          </div>
+          <h2>
+            Zero Pix Creative
+          </h2>
+
+          <p className="desc">
+            Zero Pix Creative is a creative studio specializing in real estate photo and video editing, along with photography, videography, graphic design, and video editing services, with a strong focus on professional colour correction and visual enhancement.
+          </p>
+
+          <p className="desc">
+            Our work combines creativity with precision to deliver clean, high-quality visuals that highlight properties and brands in the best possible way.
+          </p>
+
+          <p className="desc">
+            From property photo retouching and HDR editing to cinematic real estate videos, walkthroughs, and engaging visual content, we help realtors, builders, businesses, and creators present their ideas with clarity and impact.
+          </p>
+
+          <p className="desc">
+            We focus on detail, lighting, design, and colour accuracy to create visuals that attract attention, enhance listings, strengthen brand identity, and build a strong professional presence across digital platforms.
+          </p>
+
+        </div>
+
+      </section>
+
+      {/* ================= SERVICES ================= */}
+
+      <section className="dark-section" id="services">
+
+        <div className="container">
+
+          <p className="section-small-title yellow">
+            WHAT WE DO
+          </p>
+
+          <h2 className="white">
+            Professional Creative Services
+          </h2>
 
           <div className="services-grid">
 
+            {/* PHOTO EDITING */}
+
             <div className="service-card">
 
-              <h3>Real Estate Editing</h3>
+              <h3>🏠 Real Estate Photo Editing</h3>
 
               <ul>
-
-                <li>HDR Editing</li>
-
+                <li>Virtual Staging</li>
+                <li>HDR Photos</li>
+                <li>Day-to-Dusk Conversion</li>
+                <li>Interior Colour Balancing</li>
                 <li>Sky Replacement</li>
-
-                <li>Object Removal</li>
-
-                <li>Day To Dusk</li>
-
+                <li>Perspective Correction</li>
+                <li>Furniture Clean-up</li>
+                <li>Amenity Highlights Editing</li>
               </ul>
 
             </div>
 
+            {/* VIDEO */}
+
             <div className="service-card">
 
-              <h3>Video Editing</h3>
+              <h3>🎥 Real Estate Video Editing</h3>
 
               <ul>
-
-                <li>Walkthrough Videos</li>
-
-                <li>Cinematic Edit</li>
-
-                <li>Drone Edit</li>
-
-                <li>Social Media Reels</li>
-
+                <li>Walkthrough Video Editing</li>
+                <li>Cinematic Real Estate Editing</li>
+                <li>Social Media / Reel Editing</li>
+                <li>Promotional Editing</li>
+                <li>Map & Location Highlight Editing</li>
+                <li>Drone Footage Editing</li>
               </ul>
 
             </div>
 
+            {/* DESIGN */}
+
             <div className="service-card">
 
-              <h3>Graphic Design</h3>
+              <h3>🎨 Graphic Design & Motion</h3>
 
               <ul>
-
-                <li>Branding</li>
-
-                <li>Poster Design</li>
-
-                <li>Motion Graphics</li>
-
-                <li>Packaging Design</li>
-
+                <li>Marketing & Advertising Design</li>
+                <li>Product Packaging</li>
+                <li>Labels & Wrappers</li>
+                <li>Animated Graphics</li>
+                <li>GIFs & Social Media Editing</li>
+                <li>Motion Graphics & VFX</li>
               </ul>
 
             </div>
 
           </div>
 
-        </section>
+        </div>
 
-        {/* FOOTER */}
+      </section>
 
-        <footer className="footer">
+      {/* ================= PACKAGES ================= */}
 
-          <h2>ZERO PIX CREATIVE</h2>
+      <section className="section" id="packages">
 
-          <p>
-            Real Estate Editing • Photography • Videography
+        <div className="container">
+
+          <p className="section-small-title">
+            PACKAGES
           </p>
 
-          <p>
-            © 2026 All Rights Reserved
+          <h2>
+            Our Real Estate Photo Editing Packages
+          </h2>
+
+          <p className="desc">
+            As per the editing jobs required, we have defined three packages for our real estate services.
           </p>
 
-        </footer>
+          <div className="package-grid">
 
-      </main>
+            {/* BASIC */}
+
+            <div className="package-card">
+
+              <h3>Basic Package</h3>
+
+              <h1>$49</h1>
+
+              <ul>
+                <li>Basic Colour Correction</li>
+                <li>Image Sharpening</li>
+                <li>Perspective Correction</li>
+                <li>Garage Removal</li>
+              </ul>
+
+              <button>Select Plan</button>
+
+            </div>
+
+            {/* PREMIUM */}
+
+            <div className="package-card premium-card">
+
+              <span className="popular-tag">
+                MOST POPULAR
+              </span>
+
+              <h3>Premium Package</h3>
+
+              <h1>$99</h1>
+
+              <ul>
+                <li>White Balance Adjustment</li>
+                <li>Sky Replacement</li>
+                <li>Dust Removal</li>
+                <li>Small Object Removal</li>
+                <li>Masking Images</li>
+              </ul>
+
+              <button>Select Plan</button>
+
+            </div>
+
+            {/* ADVANCED */}
+
+            <div className="package-card">
+
+              <h3>Advanced Package</h3>
+
+              <h1>$149</h1>
+
+              <ul>
+                <li>Exposure Correction</li>
+                <li>Lawn Enhancement</li>
+                <li>Colour Cast Removal</li>
+                <li>HDR Editing</li>
+                <li>Floor & Wall Cleaning</li>
+              </ul>
+
+              <button>Select Plan</button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= WHY US ================= */}
+
+      <section className="why-section" id="why">
+
+        <div className="container">
+
+          <p className="section-small-title yellow">
+            WHY CHOOSE US
+          </p>
+
+          <h2 className="white">
+            Why Outsource Real Estate Photo Editing Services To Us
+          </h2>
+
+          <div className="why-grid">
+
+            <div className="why-card">
+
+              <h3>Expert Visual Enhancements</h3>
+
+              <p>
+                We transform ordinary property photos into eye-catching visuals that instantly attract buyers.
+              </p>
+
+            </div>
+
+            <div className="why-card">
+
+              <h3>Fast Turnaround Delivery</h3>
+
+              <p>
+                Get edited property images quickly so you can publish listings faster.
+              </p>
+
+            </div>
+
+            <div className="why-card">
+
+              <h3>Dedicated Photo Editing Team</h3>
+
+              <p>
+                Work with a specialized editing team focused solely on real estate visuals.
+              </p>
+
+            </div>
+
+            <div className="why-card">
+
+              <h3>Consistent Quality Output</h3>
+
+              <p>
+                Every photo receives professional enhancements with premium quality control.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CONTACT ================= */}
+
+      <section className="contact-section" id="contact">
+
+        <div className="container contact-center">
+
+          <h2>
+            Let's Work Together
+          </h2>
+
+          <p>
+            Contact us for premium real estate editing solutions.
+          </p>
+
+          <button>
+            Contact Now
+          </button>
+
+        </div>
+
+      </section>
+
+      {/* ================= FOOTER ================= */}
+
+      <footer className="footer">
+
+        <h2>ZERO PIX CREATIVE</h2>
+
+        <p>
+          Real Estate Editing • Photography • Videography
+        </p>
+
+        <p>
+          © 2026 All Rights Reserved
+        </p>
+
+      </footer>
+
     </>
   );
 }
