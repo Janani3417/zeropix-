@@ -22,10 +22,9 @@ function App() {
 
           <div className="brand-text">
 
-            <h2>Zero Pix</h2>
+            <h3>Beyond the Frame</h3>
 
-            <p>Creative Studio</p>
-
+            
           </div>
 
         </div>
@@ -97,18 +96,18 @@ function App() {
         <div className="hero-card">
 
           <p className="hero-subtitle">
-            PROFESSIONAL REAL ESTATE EDITING
+            REAL ESTATE VISUAL SOLUTIONS
           </p>
 
           <h1>
-            Premium Property
-            <br />
-            Editing Services
+           
+Elevate Your Property Presentation
+            
           </h1>
 
           <p className="hero-text">
-            Photo Editing, Video Editing,
-            Graphic Design & Motion Graphics
+            High-quality Photo & Video Editing,
+Creative Graphics, and Motion Design tailored for real estate success.
           </p>
 
           <div className="hero-buttons">
