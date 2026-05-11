@@ -18,7 +18,6 @@ function App() {
 
         <div className="nav-left">
 
-          {/* preload effect */}
           <img
             src={logo}
             alt="Zero Pix"
@@ -30,8 +29,8 @@ function App() {
 
             <h2>
               <span className="yellow-text">Beyond</span>{" "}
-              <span className="black-text">the </span>
-               <span className="black-text1"> Frame</span>
+              <span className="black-text">the</span>{" "}
+              <span className="black-text1">Frame</span>
             </h2>
 
           </div>
@@ -45,12 +44,12 @@ function App() {
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#whyus">Why Us</a>
+          <a href="#whyus">Why_Us</a>
           <a href="#contact">Contact</a>
 
         </nav>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* MOBILE MENU */}
 
         <div
           className={`menu-btn ${menuOpen ? "active" : ""}`}
@@ -103,14 +102,13 @@ function App() {
 
           <h1>
             Elevate Your
-        
             Property Presentation
           </h1>
 
           <p className="hero-text">
             High-quality Photo & Video Editing,
-            Creative Graphics, and Motion Design tailored for
-            real estate success.
+            Creative Graphics, and Motion Design tailored
+            for real estate success.
           </p>
 
           <div className="hero-buttons">
@@ -147,19 +145,22 @@ function App() {
           <div className="about-box">
 
             <p>
-              Zero Pix Creative is a creative studio specializing in real estate photo and video editing, along with photography, videography, graphic design, and video editing services, with a strong focus on professional colour correction and visual enhancement.
+              Zero Pix Creative is a creative studio specializing
+              in real estate photo and video editing, along with
+              photography, videography, graphic design, and video
+              editing services.
             </p>
 
             <p>
-              Our work combines creativity with precision to deliver clean, high-quality visuals that highlight properties and brands in the best possible way.
+              We combine creativity with precision to deliver
+              high-quality visuals that highlight properties
+              in the best possible way.
             </p>
 
             <p>
-              From property photo retouching and HDR editing to cinematic real estate videos, walkthroughs, and engaging visual content, we help realtors, builders, businesses, and creators present their ideas with clarity and impact.
-            </p>
-
-            <p>
-              We focus on detail, lighting, design, and colour accuracy to create visuals that attract attention, enhance listings, strengthen brand identity, and build a strong professional presence across digital platforms.
+              From property photo retouching and HDR editing
+              to cinematic walkthrough videos, we help realtors
+              and businesses present their ideas professionally.
             </p>
 
           </div>
@@ -192,11 +193,8 @@ function App() {
                 <li>Virtual Staging</li>
                 <li>HDR Photos</li>
                 <li>Day-to-Dusk Conversion</li>
-                <li>Interior Colour Balancing</li>
                 <li>Sky Replacement</li>
                 <li>Perspective Correction</li>
-                <li>Furniture Clean-up</li>
-                <li>Amenity Highlights Editing</li>
               </ul>
 
             </div>
@@ -207,28 +205,22 @@ function App() {
 
               <ul>
                 <li>Walkthrough Video Editing</li>
-                <li>Cinematic Real Estate Editing</li>
-                <li>Social Media / Reel Editing</li>
-                <li>Promotional Editing</li>
-                <li>Map & Location Highlight Editing</li>
-                <li>Agent Presentation Editing</li>
                 <li>Drone Footage Editing</li>
+                <li>Cinematic Real Estate Editing</li>
+                <li>Social Media Reels</li>
               </ul>
 
             </div>
 
             <div className="service-card">
 
-              <h3>🎨 Graphic Design & Motion Graphics</h3>
+              <h3>🎨 Graphic Design</h3>
 
               <ul>
-                <li>Posters & Social Media Ads</li>
-                <li>Product Packaging</li>
-                <li>Boxes, Labels & Wrappers</li>
-                <li>Animated Graphics</li>
-                <li>Commercial Advertisement Editing</li>
-                <li>Corporate Video Editing</li>
-                <li>Educational & Tutorial Editing</li>
+                <li>Social Media Posters</li>
+                <li>Motion Graphics</li>
+                <li>Corporate Videos</li>
+                <li>Advertisement Editing</li>
               </ul>
 
             </div>
@@ -255,46 +247,148 @@ function App() {
 
           <div className="why-grid">
 
-            <div className="why-card">
-              <h3>Expert Visual Enhancements</h3>
-              <p>
-                We transform ordinary property photos into eye-catching, professionally enhanced images.
-              </p>
-            </div>
+            {/* CARD 1 */}
 
             <div className="why-card">
-              <h3>Fast Turnaround Delivery</h3>
-              <p>
-                Get edited and optimized property images quickly for faster listings.
-              </p>
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png"
+                  alt="visual"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Expert Visual Enhancements</h3>
+
+                <p>
+                  We transform ordinary property photos into
+                  eye-catching, professionally enhanced images.
+                </p>
+
+              </div>
+
             </div>
 
-            <div className="why-card">
-              <h3>Dedicated Editing Team</h3>
-              <p>
-                Skilled professionals focused only on real estate photo editing.
-              </p>
-            </div>
+            {/* CARD 2 */}
 
             <div className="why-card">
-              <h3>Consistent Quality Output</h3>
-              <p>
-                Uniform lighting, colour correction, and clarity in every project.
-              </p>
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2784/2784459.png"
+                  alt="fast"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Fast Turnaround Delivery</h3>
+
+                <p>
+                  Get edited and optimized property images
+                  quickly for faster listings.
+                </p>
+
+              </div>
+
             </div>
 
-            <div className="why-card">
-              <h3>Scalable Support</h3>
-              <p>
-                Whether you have few images or thousands, we scale easily.
-              </p>
-            </div>
+            {/* CARD 3 */}
 
             <div className="why-card">
-              <h3>Cost Effective Solutions</h3>
-              <p>
-                High-end editing quality at affordable outsourcing pricing.
-              </p>
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/681/681494.png"
+                  alt="team"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Dedicated Editing Team</h3>
+
+                <p>
+                  Skilled professionals focused only on
+                  real estate photo editing.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CARD 4 */}
+
+            <div className="why-card">
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
+                  alt="quality"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Consistent Quality Output</h3>
+
+                <p>
+                  Uniform lighting, colour correction,
+                  and clarity in every project.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CARD 5 */}
+
+            <div className="why-card">
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                  alt="support"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Scalable Support</h3>
+
+                <p>
+                  Whether you have few images or thousands,
+                  we scale easily.
+                </p>
+
+              </div>
+
+            </div>
+
+            {/* CARD 6 */}
+
+            <div className="why-card">
+
+              <div className="why-icon">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2331/2331941.png"
+                  alt="cost"
+                />
+              </div>
+
+              <div className="why-content">
+
+                <h3>Cost Effective Solutions</h3>
+
+                <p>
+                  High-end editing quality at affordable
+                  outsourcing pricing.
+                </p>
+
+              </div>
+
             </div>
 
           </div>

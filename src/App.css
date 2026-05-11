@@ -23,13 +23,36 @@ body{
   overflow:hidden;
 }
 
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    opacity:0;
+    transform:scale(0.9);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
 /* ================= NAVBAR ================= */
 
 .navbar{
   width:100%;
   height:90px;
-
-  background:rgba(255,255,255,0.97);
+  background:#ffffff;
 
   display:flex;
   justify-content:space-between;
@@ -43,37 +66,24 @@ body{
 
   z-index:999;
 
-  box-shadow:0 5px 20px rgba(0,0,0,0.06);
+  box-shadow:0 4px 20px rgba(0,0,0,0.06);
 }
-
-/* ================= LEFT AREA ================= */
 
 .nav-left{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:70px;
 }
 
 .logo{
-  width:90px;
-  height:90px;
+  width:20%;
+  height:20%;
   object-fit:contain;
-
-  image-rendering:auto;
-}
-
-/* ================= BRAND TEXT ================= */
-
-.brand-text{
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .brand-text h2{
-  font-size:42px;
+  font-size:35px;
   font-weight:800;
-  line-height:1;
 }
 
 .yellow-text{
@@ -83,9 +93,11 @@ body{
 .black-text{
   color:#111111;
 }
+
 .black-text1{
   color:#f5b400;
 }
+
 /* ================= DESKTOP NAV ================= */
 
 .desktop-nav{
@@ -96,20 +108,17 @@ body{
 
 .desktop-nav a{
   text-decoration:none;
+  color:#081229;
 
-  color:#1f2940;
-
-  font-size:17px;
+  font-size:20px;
   font-weight:700;
 
   position:relative;
-
   transition:0.3s;
 }
 
 .desktop-nav a::after{
   content:"";
-
   position:absolute;
 
   left:0;
@@ -119,12 +128,7 @@ body{
   height:3px;
 
   background:#f5b400;
-
   transition:0.3s;
-}
-
-.desktop-nav a:hover{
-  color:#f5b400;
 }
 
 .desktop-nav a:hover::after{
@@ -149,11 +153,8 @@ body{
   width:100%;
   height:3px;
 
-  background:#1f2940;
-
+  background:#081229;
   border-radius:10px;
-
-  transition:0.3s;
 }
 
 .menu-btn.active span:nth-child(1){
@@ -179,7 +180,7 @@ body{
   width:100%;
   height:100vh;
 
-  background:white;
+  background:#ffffff;
 
   padding:40px 30px;
 
@@ -200,7 +201,7 @@ body{
 .mobile-nav a{
   text-decoration:none;
 
-  color:#1f2940;
+  color:#081229;
 
   font-size:24px;
   font-weight:700;
@@ -232,7 +233,7 @@ body{
 
   background:rgba(255,255,255,0.95);
 
-  border-radius:40px;
+  border-radius:35px;
 
   padding:80px 60px;
 
@@ -244,34 +245,34 @@ body{
 .hero-subtitle{
   color:#f5b400;
 
-  letter-spacing:10px;
+  letter-spacing:8px;
 
-  font-size:15px;
-  font-weight:600;
+  font-size:14px;
+  font-weight:700;
 
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .hero-card h1{
-  font-size:72px;
+  font-size:70px;
 
   line-height:1.15;
 
   color:#081229;
 
-  margin-bottom:35px;
+  margin-bottom:30px;
 
   font-weight:800;
 }
 
 .hero-text{
-  font-size:26px;
+  font-size:24px;
 
   line-height:1.8;
 
   color:#555;
 
-  max-width:900px;
+  max-width:850px;
 
   margin:auto auto 45px;
 }
@@ -287,14 +288,14 @@ body{
 
 .primary-btn,
 .secondary-btn{
-  width:240px;
-  height:72px;
+  width:220px;
+  height:68px;
 
   border:none;
 
-  border-radius:18px;
+  border-radius:16px;
 
-  font-size:18px;
+  font-size:17px;
   font-weight:700;
 
   cursor:pointer;
@@ -329,19 +330,21 @@ body{
 
 .container{
   width:100%;
-  max-width:1400px;
+  max-width:1300px;
   margin:auto;
 }
 
 .small-title{
   color:#f5b400;
 
-  letter-spacing:5px;
+  letter-spacing:6px;
 
   font-size:14px;
   font-weight:700;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
+
+  text-align:center;
 }
 
 .container h2{
@@ -351,7 +354,9 @@ body{
 
   color:#081229;
 
-  margin-bottom:45px;
+  margin-bottom:50px;
+
+  text-align:center;
 }
 
 .about-box p{
@@ -364,22 +369,11 @@ body{
   margin-bottom:24px;
 }
 
-/* ================= DARK SECTION ================= */
-
-.dark-section,
-.why-section{
-  background:#081229;
-}
-
-.white{
-  color:white !important;
-}
-
-.gold{
-  color:#f5b400;
-}
-
 /* ================= SERVICES ================= */
+
+.dark-section{
+  background:#f8f9fc;
+}
 
 .services-grid{
   display:grid;
@@ -396,73 +390,138 @@ body{
 
   padding:40px 35px;
 
-  border-radius:25px;
+  border-radius:28px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
   transition:0.3s;
 }
 
 .service-card:hover{
-  transform:translateY(-8px);
+  transform:translateY(-10px);
 }
 
 .service-card h3{
   color:#081229;
 
-  margin-bottom:22px;
+  margin-bottom:24px;
 
   font-size:24px;
+
+  text-align:center;
 }
 
 .service-card ul{
-  padding-left:20px;
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:16px;
 }
 
 .service-card li{
-  margin-bottom:14px;
+  color:#555;
+
+  font-size:16px;
 
   line-height:1.8;
 
-  color:#555;
+  position:relative;
+
+  padding-left:22px;
+}
+
+.service-card li::before{
+  content:"✓";
+
+  position:absolute;
+  left:0;
+  top:0;
+
+  color:#f5b400;
+
+  font-weight:700;
 }
 
 /* ================= WHY US ================= */
 
+.why-section{
+  background:#ffffff;
+}
+
+.white{
+  color:#081229 !important;
+}
+
+.gold{
+  color:#f5b400;
+}
+
 .why-grid{
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:30px;
-
-  margin-top:50px;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  margin-top:60px;
 }
 
 .why-card{
-  background:white;
+  display:flex;
+  align-items:center;
+  gap:35px;
 
-  padding:35px;
+  padding:40px 0;
+
+  border-bottom:1px solid #e5e5e5;
+}
+
+.why-card:last-child{
+  border-bottom:none;
+}
+
+.why-icon{
+  min-width:110px;
+
+  width:110px;
+  height:110px;
 
   border-radius:25px;
 
-  transition:0.3s;
+  background:#fff7df;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.why-card:hover{
-  transform:translateY(-8px);
+.why-icon img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
 }
 
-.why-card h3{
+.why-content{
+  flex:1;
+}
+
+.why-content h3{
   color:#081229;
 
-  margin-bottom:18px;
+  font-size:34px;
 
-  font-size:24px;
+  margin-bottom:14px;
+
+  font-weight:700;
 }
 
-.why-card p{
-  color:#555;
+.why-content p{
+  color:#666;
 
-  line-height:1.9;
+  font-size:21px;
+
+  line-height:1.8;
+
+  max-width:850px;
 }
 
 /* ================= CONTACT ================= */
@@ -484,12 +543,12 @@ body{
 }
 
 .contact-box button{
-  width:250px;
-  height:72px;
+  width:240px;
+  height:68px;
 
   border:none;
 
-  border-radius:18px;
+  border-radius:16px;
 
   background:#f5b400;
 
@@ -540,16 +599,23 @@ body{
 @media(max-width:1100px){
 
   .hero-card h1{
-    font-size:58px;
+    font-size:54px;
   }
 
   .hero-text{
-    font-size:22px;
+    font-size:20px;
   }
 
-  .services-grid,
-  .why-grid{
+  .services-grid{
     grid-template-columns:1fr 1fr;
+  }
+
+  .why-content h3{
+    font-size:28px;
+  }
+
+  .why-content p{
+    font-size:18px;
   }
 
 }
@@ -567,55 +633,43 @@ body{
   }
 
   .navbar{
-    height:82px;
+    height:80px;
     padding:0 18px;
   }
 
   .mobile-nav{
-    top:82px;
-  }
-
-  .nav-left{
-    gap:8px;
+    top:80px;
   }
 
   .logo{
-    width:108px;
-    height:108px;
+    width:65px;
+    height:65px;
   }
 
   .brand-text h2{
-    font-size:24px;
-    line-height:1.2;
+    font-size:22px;
   }
 
   .hero{
-    padding:120px 15px 60px;
+    padding:120px 18px 60px;
   }
 
   .hero-card{
-    padding:50px 24px;
-
+    padding:45px 24px;
     border-radius:28px;
   }
 
   .hero-subtitle{
     font-size:11px;
-
-    letter-spacing:5px;
-
-    line-height:1.8;
+    letter-spacing:4px;
   }
 
   .hero-card h1{
-    font-size:42px;
-
-    line-height:1.2;
+    font-size:40px;
   }
 
   .hero-text{
     font-size:16px;
-
     line-height:1.9;
   }
 
@@ -628,8 +682,7 @@ body{
   .secondary-btn{
     width:100%;
     max-width:320px;
-
-    height:64px;
+    height:62px;
   }
 
   .section,
@@ -641,7 +694,6 @@ body{
 
   .container h2{
     font-size:34px;
-
     line-height:1.3;
   }
 
@@ -649,9 +701,47 @@ body{
     font-size:16px;
   }
 
-  .services-grid,
-  .why-grid{
+  .services-grid{
     grid-template-columns:1fr;
+  }
+
+  /* WHY SECTION MOBILE */
+
+  .why-grid{
+    margin-top:35px;
+  }
+
+  .why-card{
+    align-items:flex-start;
+
+    gap:20px;
+
+    padding:30px 0;
+  }
+
+  .why-icon{
+    min-width:70px;
+
+    width:70px;
+    height:70px;
+
+    border-radius:18px;
+  }
+
+  .why-icon img{
+    width:36px;
+    height:36px;
+  }
+
+  .why-content h3{
+    font-size:22px;
+    line-height:1.4;
+    margin-bottom:10px;
+  }
+
+  .why-content p{
+    font-size:15px;
+    line-height:1.8;
   }
 
 }
