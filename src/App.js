@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./App.css";
-import logo from "./logo.png";
+import logo from "./logo1.png";
 
 function App() {
 
@@ -18,13 +18,22 @@ function App() {
 
         <div className="nav-left">
 
-          <img src={logo} alt="Zero Pix" className="logo" />
+          {/* preload effect */}
+          <img
+            src={logo}
+            alt="Zero Pix"
+            className="logo"
+            loading="eager"
+          />
 
           <div className="brand-text">
 
-            <h3>Beyond the Frame</h3>
+            <h2>
+              <span className="yellow-text">Beyond</span>{" "}
+              <span className="black-text">the </span>
+               <span className="black-text1"> Frame</span>
+            </h2>
 
-            
           </div>
 
         </div>
@@ -36,7 +45,6 @@ function App() {
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#packages">Packages</a>
           <a href="#whyus">Why Us</a>
           <a href="#contact">Contact</a>
 
@@ -57,7 +65,7 @@ function App() {
 
       </header>
 
-      {/* MOBILE NAV */}
+      {/* ================= MOBILE NAV ================= */}
 
       <div className={menuOpen ? "mobile-nav active" : "mobile-nav"}>
 
@@ -71,10 +79,6 @@ function App() {
 
         <a href="#services" onClick={() => setMenuOpen(false)}>
           Services
-        </a>
-
-        <a href="#packages" onClick={() => setMenuOpen(false)}>
-          Packages
         </a>
 
         <a href="#whyus" onClick={() => setMenuOpen(false)}>
@@ -91,8 +95,6 @@ function App() {
 
       <section className="hero" id="home">
 
-        <div className="hero-overlay"></div>
-
         <div className="hero-card">
 
           <p className="hero-subtitle">
@@ -100,14 +102,15 @@ function App() {
           </p>
 
           <h1>
-           
-Elevate Your Property Presentation
-            
+            Elevate Your
+        
+            Property Presentation
           </h1>
 
           <p className="hero-text">
             High-quality Photo & Video Editing,
-Creative Graphics, and Motion Design tailored for real estate success.
+            Creative Graphics, and Motion Design tailored for
+            real estate success.
           </p>
 
           <div className="hero-buttons">
@@ -181,8 +184,6 @@ Creative Graphics, and Motion Design tailored for real estate success.
 
           <div className="services-grid">
 
-            {/* PHOTO EDITING */}
-
             <div className="service-card">
 
               <h3>🏠 Real Estate Photo Editing</h3>
@@ -200,8 +201,6 @@ Creative Graphics, and Motion Design tailored for real estate success.
 
             </div>
 
-            {/* VIDEO EDITING */}
-
             <div className="service-card">
 
               <h3>🎥 Real Estate Video Editing</h3>
@@ -218,8 +217,6 @@ Creative Graphics, and Motion Design tailored for real estate success.
 
             </div>
 
-            {/* DESIGN */}
-
             <div className="service-card">
 
               <h3>🎨 Graphic Design & Motion Graphics</h3>
@@ -233,93 +230,6 @@ Creative Graphics, and Motion Design tailored for real estate success.
                 <li>Corporate Video Editing</li>
                 <li>Educational & Tutorial Editing</li>
               </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* ================= PACKAGES ================= */}
-
-      <section className="section" id="packages">
-
-        <div className="container">
-
-          <p className="small-title">
-            PACKAGES
-          </p>
-
-          <h2>
-            Real Estate Editing Packages
-          </h2>
-
-          <div className="package-grid">
-
-            {/* BASIC */}
-
-            <div className="package-card">
-
-              <h3>Basic Package</h3>
-
-              <h1>$49</h1>
-
-              <ul>
-                <li>Basic Colour Correction</li>
-                <li>Image Sharpening</li>
-                <li>Perspective Correction</li>
-                <li>White Balance Adjustment</li>
-                <li>Contrast & Light Adjustment</li>
-              </ul>
-
-              <button>Select Package</button>
-
-            </div>
-
-            {/* PREMIUM */}
-
-            <div className="package-card premium">
-
-              <span className="tag">
-                MOST POPULAR
-              </span>
-
-              <h3>Premium Package</h3>
-
-              <h1>$99</h1>
-
-              <ul>
-                <li>HDR Editing</li>
-                <li>Sky Replacement</li>
-                <li>Object Removal</li>
-                <li>Day to Dusk Editing</li>
-                <li>Advanced Retouching</li>
-                <li>Reflection & Shadow Fixing</li>
-              </ul>
-
-              <button>Select Package</button>
-
-            </div>
-
-            {/* ADVANCED */}
-
-            <div className="package-card">
-
-              <h3>Advanced Package</h3>
-
-              <h1>$149</h1>
-
-              <ul>
-                <li>Luxury Retouching</li>
-                <li>Furniture Replacement</li>
-                <li>TV Screen Replacement</li>
-                <li>Floor & Wall Cleaning</li>
-                <li>Complete Premium Enhancement</li>
-              </ul>
-
-              <button>Select Package</button>
 
             </div>
 
@@ -436,6 +346,7 @@ Creative Graphics, and Motion Design tailored for real estate success.
     </div>
 
   );
+
 }
 
 export default App;
